@@ -115,4 +115,39 @@ public class Linkedlist {
             NodePtr = NodePtr.getNext();
         }
     }
+//Fungsi search
+    public String cari(int cari){
+        ListNode NodePtr;
+        NodePtr = this.head;
+        boolean ketemu = false;
+
+        while(NodePtr != null && ketemu == false){
+            if(cari == NodePtr.getValue()){
+                ketemu = true;
+            }
+            else{
+                ketemu = false;
+            }
+            NodePtr = NodePtr.getNext();  
+        }
+        if(ketemu == true){
+            return "Ketemu";
+        }
+        else{
+            return "Tidak ketemu";
+        }
+    }
+
+//Fungsi penjumlahan
+    public int jumlah(){
+        ListNode NodePtr;
+        NodePtr = this.head;
+        int jumlah = 0;
+        while(NodePtr != null){
+            jumlah = jumlah + NodePtr.getValue();
+            NodePtr = NodePtr.getNext();
+        }
+
+        return jumlah;
+    }    
 }

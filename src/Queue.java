@@ -42,4 +42,16 @@ public class Queue {
         
         return NodePtr;
     }
+
+    public void cetakQueue(){
+        ListNode NodePtr;
+        NodePtr = this.head;
+        if(NodePtr == null){
+            System.out.println("Queue Kosong");
+        }
+        while(NodePtr != null){
+            System.out.println(NodePtr);
+            NodePtr = NodePtr.getNext();
+        }
+    }   
 }
