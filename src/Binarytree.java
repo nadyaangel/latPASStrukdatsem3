@@ -9,7 +9,10 @@ public class Binarytree {
     }
 //Append
     public void append(int newValue){
-        this.root = insertTree(newValue, root);
+        // if(newValue % 2 == 0){
+            this.root = insertTree(newValue, root);
+        //}
+        
     }
 //insertTree
     public TreeNode insertTree(int newValue, TreeNode refNode){
